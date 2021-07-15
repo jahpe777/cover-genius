@@ -1,0 +1,257 @@
+body {
+  margin: 0;
+  background: #e5e5e5;
+  padding: 5%;
+}
+
+h1 {
+  font-family: 'brandon-grotesque';
+}
+
+/*  Card  */
+.card {
+  display: flex;
+  height: 168px;
+  padding: 15px;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.card-content {
+  width: 100%;
+  height: 100%;
+  margin: 5px;
+}
+
+.logo {
+  margin: 5px;
+}
+
+.clicked {
+  box-shadow: 0px 25px 20px rgba(172, 168, 129, 0.2),
+    0px 10px 20px rgba(197, 202, 209, 0.56);
+}
+
+/*  Policy Header  */
+.policyHeader {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  border-radius: 50%;
+  border: 2px solid #ffd200;
+  box-sizing: border-box;
+  min-width: 48px;
+  min-height: 48px;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #ffd200;
+}
+
+.policyHeader-description {
+  margin: 5px;
+}
+
+.policyHeader-description h4,
+p {
+  margin: 0;
+}
+
+.policyHeader-description h4 {
+  font-family: 'brandon-grotesque';
+  font-size: 24px;
+}
+
+.policyHeader-description p {
+  font-family: 'Bitter';
+  color: #73777c;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/*  Policy Footer  */
+.policyFooter {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  max-height: 50%;
+}
+
+.paymentDate {
+  border-right: 1px solid #e0e4e8;
+  padding: 10px;
+  height: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+.policyFooter article p:nth-child(1) {
+  font-family: 'brandon-grotesque';
+  font-size: 16px;
+  line-height: 24px;
+  color: #2d2d2d;
+}
+
+.policyFooter article p:nth-child(2) {
+  font-family: 'Bitter';
+  color: #73777c;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.coverageDates {
+  height: 100%;
+  min-width: 190px;
+  box-sizing: border-box;
+  padding: 10px;
+  border-right: 1px solid #e0e4e8;
+}
+
+.coverageDates-content {
+  width: 100%;
+}
+
+.policy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Bitter;
+  font-size: 12px;
+  line-height: 18px;
+  color: #73777c;
+}
+
+.data {
+  font-family: 'brandon-grotesque';
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.active {
+  color: #00a082;
+}
+
+.expired {
+  color: #ff3200;
+}
+
+.active::after {
+  background-color: #00a082;
+}
+
+.expired::after {
+  background-color: #ff3200;
+}
+
+.status::after {
+  content: '';
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: 0.285rem;
+  border-radius: 50%;
+}
+
+.price {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.renewal {
+  height: 100%;
+  box-sizing: border-box;
+  border-left: 1px solid #e0e4e8;
+  padding: 10px;
+}
+
+.renewal p:first-child:first-letter {
+  text-transform: capitalize;
+}
+
+/*  Mobile  */
+@media screen and (max-width: 475px) {
+  .logo img {
+    width: 90%;
+    float: right;
+  }
+
+  .policyFooter article p:nth-child(1) {
+    font-size: 13px;
+  }
+
+  .policyHeader-description h4 {
+    font-size: 20px;
+  }
+
+  .policyHeader {
+    height: 60%;
+  }
+
+  .coverageDates {
+    border-right: none;
+  }
+
+  .policyFooter {
+    justify-content: space-around;
+    height: 40%;
+  }
+
+  .tablet,
+  .desktop,
+  .paymentDate,
+  .price,
+  .renewal,
+  .toggle {
+    display: none;
+  }
+  .coverageDays {
+    border: none;
+  }
+}
+
+/*  Tablet  */
+@media screen and (min-width: 476px) and (max-width: 1023px) {
+  .tablet {
+    display: block;
+    margin-left: auto;
+  }
+
+  .policyHeader-description h4 {
+    font-size: 20px;
+  }
+
+  .logo img {
+    width: 70%;
+  }
+
+  .mobile,
+  .desktop {
+    display: none;
+  }
+}
+
+/*  Desktop  */
+@media screen and (min-width: 1024px) {
+  .mobile,
+  .tablet {
+    display: none;
+  }
+}
